@@ -26,10 +26,6 @@ public class DifficultyButton : MonoBehaviour
     private void SetDifficulty()
     {
         Debug.Log(gameObject.name + "was clicked");
-        gameManager.StartGame(difficulty);
-
-        // if easy, select plane prefab and have game manager instantiate it and assign it to the player
-        // if medium, select prop plane 
-        // if hard, select jet
+        gameManager.SetPlayerAircraft(difficulty);
     } 
 }

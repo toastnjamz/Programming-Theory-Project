@@ -7,14 +7,15 @@ public class Aircraft : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     public float verticalInput;
+    // add a variable for the prefab
 
     // Start is called before the first frame update
     void Start()
     {
-
+        // in child classes, instantiate a prefab for their selected aircraft
     }
 
-    // Update is called once per frame
+    // Move this to child classes
     void FixedUpdate()
     {
         MoveAircraft();
