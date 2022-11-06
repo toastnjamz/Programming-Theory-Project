@@ -27,5 +27,6 @@ public class DifficultyButton : MonoBehaviour
     {
         Debug.Log(gameObject.name + "was clicked");
         gameManager.SetPlayerAircraft(difficulty);
+        gameManager.StartGame();
     } 
 }

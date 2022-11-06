@@ -2,24 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aircraft : MonoBehaviour
+public abstract class Aircraft : MonoBehaviour
 {
-    public float speed;
-    public float rotationSpeed;
-    public float verticalInput;
-    // add a variable for the prefab
+    public float speed = 10f;
+    public float rotationSpeed = 50f;
+    public float verticalInput = 15f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // in child classes, instantiate a prefab for their selected aircraft
-    }
-
-    // Move this to child classes
-    void FixedUpdate()
-    {
-        MoveAircraft();
-    }
+    //protected abstract void MoveAircraft();
 
     protected virtual void MoveAircraft()
     {

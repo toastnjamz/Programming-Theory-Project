@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
     public Aircraft playerAircraft;
     
     // Start is called before the first frame update
@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
     {
         if (difficulty == 1)
         {
-            // if easy, select plane prefab and have game manager instantiate it and assign it to the player
-            // playerAircraft = 
+            // if easy, select Small_Plane prefab and have game manager instantiate SmallPlane
+            // playerAircraft = gameObject.AddComponent<SmallPlane>();
         }
         if (difficulty == 2)
         {
@@ -52,10 +52,8 @@ public class GameManager : MonoBehaviour
         // set up an else statement for internal error
     }
     
-    // pass in the player's aircraft instead of difficulty
-    public void StartGame(Aircraft playerAircraft)
+    public void StartGame()
     {
         SceneManager.LoadScene(1);
-
     }
 }
