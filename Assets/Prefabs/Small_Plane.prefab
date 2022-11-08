@@ -225,4 +225,6 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 50
   verticalInput: 15
+  planePrefab: {fileID: 0}
+  maincamera: {fileID: 9222890621679676280, guid: 4d3e1038d6bfaac41a391c5a6311510c, type: 3}
   easyPlanePrefab: {fileID: 5954733665943154598}

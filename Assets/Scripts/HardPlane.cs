@@ -5,19 +5,27 @@ using UnityEngine;
 // INHERITANCE
 public class HardPlane : Aircraft
 {
+    // POLYMORPHISM
     // TODO: set private memebers for speed, rotationSpeed, and verticalInput
 
     public GameObject hardPlanePrefab;
+    public Camera mainCamera;
+    private Vector3 offset = new Vector3(33, 2, 9);
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        Instantiate(hardPlanePrefab, transform.position, hardPlanePrefab.transform.rotation);
+        mainCamera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         MoveAircraft();
+        MoveCamera();
+    }
+
+    void MoveCamera()
+    {
+        mainCamera.transform.position = hardPlanePrefab.transform.position + offset;
     }
 }

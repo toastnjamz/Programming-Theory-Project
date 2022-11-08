@@ -6,17 +6,24 @@ using UnityEngine;
 public class EasyPlane : Aircraft
 {
     // TODO: set private memebers for speed, rotationSpeed, and verticalInput
-    public GameObject easyPlanePrefab;
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject easyPlanePrefab;
+    public Camera mainCamera;
+    private Vector3 offset = new Vector3(33, 2, 9);
+
+    private void Awake()
     {
-        //Instantiate(easyPlanePrefab, transform.position, easyPlanePrefab.transform.rotation);
+        mainCamera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         MoveAircraft();
+        MoveCamera();
+    }
+    void MoveCamera()
+    {
+        mainCamera.transform.position = easyPlanePrefab.transform.position + offset;
     }
 }

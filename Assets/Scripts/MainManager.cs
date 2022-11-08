@@ -35,14 +35,14 @@ public class MainManager : MonoBehaviour
         }
         if (difficulty == 2)
         {
-            // if medium, select prop plane 
-            // playerAircraft = 
+            // if easy, instantiate new MediumPlane object
+            Instantiate(playerMediumPlane, transform.position, transform.rotation);
         }
         if (difficulty == 3)
         {
-            // if hard, select jet
-            // playerAircraft = 
+            // if easy, instantiate new HardPlane object
+            Instantiate(playerHardPlane, transform.position, transform.rotation);
         }
-        // set up an else statement for internal error
+        // set up an else statement for error handling
     }
 }

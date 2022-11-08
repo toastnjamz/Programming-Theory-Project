@@ -8,8 +8,7 @@ public abstract class Aircraft : MonoBehaviour
     public float rotationSpeed = 50f;
     public float verticalInput = 15f;
 
-    //protected abstract void MoveAircraft();
-
+    // ABSTRACTION
     protected virtual void MoveAircraft()
     {
         // get the user's vertical input
