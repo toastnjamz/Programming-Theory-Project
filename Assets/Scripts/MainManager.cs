@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    // variable for player aircraft?
+    public int difficulty;
+    public EasyPlane playerEasyPlane;
+    public MediumPlane playerMediumPlane;
+    public HardPlane playerHardPlane;
     
     // Start is called before the first frame update
     void Start()
     {
         if (GameManager.Instance != null)
         {
-            // load player aircraft prefab
+            difficulty = GameManager.Instance.playerSelectedDifficulty;
+            Debug.Log("Difficulty set from GameManager instance");
+            InstantiatePlayerAircraft(difficulty);
         }
     }
 
@@ -19,5 +24,25 @@ public class MainManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void InstantiatePlayerAircraft(int difficulty)
+    {
+        if (difficulty == 1)
+        {
+            // if easy, instantiate new EasyPlane object
+            Instantiate(playerEasyPlane, transform.position, transform.rotation);
+        }
+        if (difficulty == 2)
+        {
+            // if medium, select prop plane 
+            // playerAircraft = 
+        }
+        if (difficulty == 3)
+        {
+            // if hard, select jet
+            // playerAircraft = 
+        }
+        // set up an else statement for internal error
     }
 }

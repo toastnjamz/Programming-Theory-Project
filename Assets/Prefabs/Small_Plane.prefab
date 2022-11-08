@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 2249926974871425279}
   - component: {fileID: 5954733665945350502}
   - component: {fileID: 908640117285475941}
-  - component: {fileID: 2773002067614296326}
+  - component: {fileID: -6138815655581531647}
   m_Layer: 0
   m_Name: Small_Plane
   m_TagString: Untagged
@@ -210,7 +210,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2773002067614296326
+--- !u!114 &-6138815655581531647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,4 +225,4 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 50
   verticalInput: 15
-  smallPlanePrefab: {fileID: 5954733665943154598}
+  easyPlanePrefab: {fileID: 5954733665943154598}

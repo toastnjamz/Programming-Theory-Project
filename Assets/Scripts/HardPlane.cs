@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallPlane : Aircraft
+// INHERITANCE
+public class HardPlane : Aircraft
 {
-    public GameObject smallPlanePrefab;
-    
+    // TODO: set private memebers for speed, rotationSpeed, and verticalInput
+
+    public GameObject hardPlanePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(smallPlanePrefab, transform.position, smallPlanePrefab.transform.rotation);
+        Instantiate(hardPlanePrefab, transform.position, hardPlanePrefab.transform.rotation);
     }
 
     // Update is called once per frame
