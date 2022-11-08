@@ -20,12 +20,6 @@ public class MainManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void InstantiatePlayerAircraft(int difficulty)
     {
         if (difficulty == 1)
@@ -35,12 +29,12 @@ public class MainManager : MonoBehaviour
         }
         if (difficulty == 2)
         {
-            // if easy, instantiate new MediumPlane object
+            // if medium, instantiate new MediumPlane object
             Instantiate(playerMediumPlane, transform.position, transform.rotation);
         }
         if (difficulty == 3)
         {
-            // if easy, instantiate new HardPlane object
+            // if hard, instantiate new HardPlane object
             Instantiate(playerHardPlane, transform.position, transform.rotation);
         }
         // set up an else statement for error handling

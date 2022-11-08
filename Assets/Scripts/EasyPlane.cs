@@ -5,8 +5,6 @@ using UnityEngine;
 // INHERITANCE
 public class EasyPlane : Aircraft
 {
-    // TODO: set private memebers for speed, rotationSpeed, and verticalInput
-
     public GameObject easyPlanePrefab;
     public Camera mainCamera;
     private Vector3 offset = new Vector3(33, 2, 9);

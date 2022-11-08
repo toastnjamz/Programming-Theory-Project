@@ -5,9 +5,6 @@ using UnityEngine;
 // INHERITANCE
 public class MediumPlane : Aircraft
 {
-    // POLYMORPHISM
-    // TODO: set private memebers for speed, rotationSpeed, and verticalInput
-
     public GameObject mediumPlanePrefab;
     public Camera mainCamera;
     private Vector3 offset = new Vector3(33, 2, 9);
@@ -15,6 +12,13 @@ public class MediumPlane : Aircraft
     private void Awake()
     {
         mainCamera = FindObjectOfType<Camera>();
+    }
+
+    // POLYMORPHISM
+    private void Reset()
+    {
+        speed = 20f;
+        rotationSpeed = 60f;
     }
 
     // Update is called once per frame

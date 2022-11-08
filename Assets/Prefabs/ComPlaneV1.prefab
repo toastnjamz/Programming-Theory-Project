@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  rotationSpeed: 40
+  rotationSpeed: 20
   verticalInput: 15
   hardPlanePrefab: {fileID: 8509681362609813182}
   mainCamera: {fileID: 0}
